@@ -28,7 +28,7 @@ natural fit, so it reads as engineering judgment rather than a forced tie-in.
 | 2 | Builder | Creational | Auto loan proposal assembly (installments, insurance, collateral) | ⬜ |
 | 3 | Factory Method | Creational | Payment provider selection (PIX/Boleto/card) from a declared method | ⬜ |
 | 4 | Abstract Factory | Creational | Insurance policy + form + premium calculation, coherent per region | ⬜ |
-| 5 | Adapter | Structural | Fronting a mainframe/COBOL account system with a modern port | ⬜ |
+| 5 | [Adapter](structural/adapter) | Structural | Fronting a mainframe/COBOL account system with a modern port | ✅ |
 | 6 | Decorator | Structural | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) | ⬜ |
 | 7 | Facade | Structural | Salary portability orchestration (account check, Bacen lookup, notice) | ⬜ |
 | 8 | Proxy | Structural | Caching an expensive external credit-score bureau lookup | ⬜ |
@@ -40,9 +40,9 @@ natural fit, so it reads as engineering judgment rather than a forced tie-in.
 | 14 | Chain of Responsibility | Behavioral | Transaction compliance pipeline (KYC, AML, limit, fraud) | ⬜ |
 | 15 | State | Behavioral | Transaction lifecycle (PENDING → PROCESSING → SETTLED/FAILED) | ⬜ |
 
-Only the Singleton row is implemented so far. The rest are scoped and mapped (see the table
-above) but not yet built — they'll land in the same structure, one module per commit, without
-needing to re-decide what each one demonstrates.
+Only the Singleton and Adapter rows are implemented so far. The rest are scoped and mapped
+(see the table above) but not yet built — they'll land in the same structure, one module per
+commit, without needing to re-decide what each one demonstrates.
 
 ## Structure
 
@@ -53,7 +53,8 @@ flowchart LR
     Root --> Behavioral["behavioral/"]
     Creational --> Singleton["singleton ✅"]
     Creational --> CreationalRest["builder, factory-method,\nabstract-factory 🔜"]
-    Structural --> StructuralRest["adapter, decorator, facade,\nproxy, composite 🔜"]
+    Structural --> Adapter["adapter ✅"]
+    Structural --> StructuralRest["decorator, facade,\nproxy, composite 🔜"]
     Behavioral --> BehavioralRest["strategy, observer, command, template-method,\nchain-of-responsibility, state 🔜"]
 ```
 
