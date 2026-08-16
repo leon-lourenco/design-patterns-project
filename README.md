@@ -33,16 +33,16 @@ natural fit, so it reads as engineering judgment rather than a forced tie-in.
 | 7 | Facade | Structural | Salary portability orchestration (account check, Bacen lookup, notice) | ⬜ |
 | 8 | Proxy | Structural | Caching an expensive external credit-score bureau lookup | ⬜ |
 | 9 | Composite | Structural | Composable credit/insurance approval rule engine | ⬜ |
-| 10 | Strategy | Behavioral | Per-transaction-type fee calculation (PIX/TED/Boleto) | ⬜ |
+| 10 | [Strategy](behavioral/strategy) | Behavioral | Per-transaction-type fee calculation (PIX/TED/Boleto) | ✅ |
 | 11 | Observer | Behavioral | Transaction status change fan-out (webhook, audit, push) | ⬜ |
 | 12 | Command | Behavioral | Replayable batch processing queue (millions of records/day) | ⬜ |
 | 13 | Template Method | Behavioral | Legacy system migration pipeline (read, validate, transform, write) | ⬜ |
 | 14 | Chain of Responsibility | Behavioral | Transaction compliance pipeline (KYC, AML, limit, fraud) | ⬜ |
 | 15 | State | Behavioral | Transaction lifecycle (PENDING → PROCESSING → SETTLED/FAILED) | ⬜ |
 
-Only the Singleton and Adapter rows are implemented so far. The rest are scoped and mapped
-(see the table above) but not yet built — they'll land in the same structure, one module per
-commit, without needing to re-decide what each one demonstrates.
+Only the three ✅ rows are implemented so far. The rest are scoped and mapped (see the table
+above) but not yet built — they'll land in the same structure, one module per commit, without
+needing to re-decide what each one demonstrates.
 
 ## Structure
 
@@ -55,7 +55,8 @@ flowchart LR
     Creational --> CreationalRest["builder, factory-method,\nabstract-factory 🔜"]
     Structural --> Adapter["adapter ✅"]
     Structural --> StructuralRest["decorator, facade,\nproxy, composite 🔜"]
-    Behavioral --> BehavioralRest["strategy, observer, command, template-method,\nchain-of-responsibility, state 🔜"]
+    Behavioral --> Strategy["strategy ✅"]
+    Behavioral --> BehavioralRest["observer, command, template-method,\nchain-of-responsibility, state 🔜"]
 ```
 
 Every pattern module follows the same skeleton:

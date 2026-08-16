@@ -4,4 +4,5 @@ rootProject.name = "design-patterns-project"
 include(
     "creational:singleton",
     "structural:adapter",
+    "behavioral:strategy",
 )
