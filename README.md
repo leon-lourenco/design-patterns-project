@@ -24,7 +24,7 @@ natural fit, so it reads as engineering judgment rather than a forced tie-in.
 
 | # | Pattern | Category | Applied scenario | Status |
 |---|---------|----------|-------------------|--------|
-| 1 | Singleton | Creational | PIX regulatory limit registry (BACEN), hand-rolled vs. Spring-managed | ⬜ |
+| 1 | [Singleton](creational/singleton) | Creational | PIX regulatory limit registry (BACEN), hand-rolled vs. Spring-managed | ✅ |
 | 2 | Builder | Creational | Auto loan proposal assembly (installments, insurance, collateral) | ⬜ |
 | 3 | Factory Method | Creational | Payment provider selection (PIX/Boleto/card) from a declared method | ⬜ |
 | 4 | Abstract Factory | Creational | Insurance policy + form + premium calculation, coherent per region | ⬜ |
@@ -40,9 +40,9 @@ natural fit, so it reads as engineering judgment rather than a forced tie-in.
 | 14 | Chain of Responsibility | Behavioral | Transaction compliance pipeline (KYC, AML, limit, fraud) | ⬜ |
 | 15 | State | Behavioral | Transaction lifecycle (PENDING → PROCESSING → SETTLED/FAILED) | ⬜ |
 
-Nothing is implemented yet — this is the scaffolding commit. Each pattern is scoped and
-mapped to its applied scenario (see the table above) so implementation can proceed in
-batches, one module per commit, without re-deciding what each one demonstrates.
+Only the Singleton row is implemented so far. The rest are scoped and mapped (see the table
+above) but not yet built — they'll land in the same structure, one module per commit, without
+needing to re-decide what each one demonstrates.
 
 ## Structure
 
@@ -51,7 +51,8 @@ flowchart LR
     Root(["design-patterns-project"]) --> Creational["creational/"]
     Root --> Structural["structural/"]
     Root --> Behavioral["behavioral/"]
-    Creational --> CreationalRest["singleton, builder, factory-method,\nabstract-factory 🔜"]
+    Creational --> Singleton["singleton ✅"]
+    Creational --> CreationalRest["builder, factory-method,\nabstract-factory 🔜"]
     Structural --> StructuralRest["adapter, decorator, facade,\nproxy, composite 🔜"]
     Behavioral --> BehavioralRest["strategy, observer, command, template-method,\nchain-of-responsibility, state 🔜"]
 ```
@@ -79,11 +80,10 @@ container-managed one; every other module is plain Java.
 ## Running it
 
 ```bash
-./gradlew build    # compiles every module (none yet — this is the scaffolding commit)
-./gradlew test      # runs every module's tests
+./gradlew build                                    # compiles every module
+./gradlew test                                      # runs every module's tests
+./gradlew :creational:singleton:jacocoTestReport    # per-module coverage report (HTML)
 ```
-
-Once a module lands, its own README documents the module-specific `jacocoTestReport` command.
 
 No Docker, no database, no network calls — every test is a plain JUnit test against
 in-process code (including the Spring context tests, which use a plain
