@@ -82,3 +82,17 @@ one a container gives you for free once you accept the dependency.
 ```
 
 Report at `creational/singleton/build/reports/jacoco/test/html/index.html`.
+
+## Further reading
+
+- Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of
+  Reusable Object-Oriented Software*. Addison-Wesley. — Chapter 3 formalizes Singleton itself;
+  every module in this repo traces back to this book.
+- Pugh, W., Bacon, D., Bloch, J., et al. ["Double-Checked Locking is Broken" Declaration](https://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html).
+  University of Maryland. — the exact reasoning behind why `getInstance()` needs more than a
+  null check under the pre-Java-5 memory model, and why a plain (non-`volatile`) field is not
+  enough.
+- Manson, J., Pugh, W., & Adve, S. V. (2005). "The Java Memory Model." In *Proceedings of the
+  32nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL '05)*,
+  378–391. — the JSR-133 formalization that makes `volatile` sufficient to fix double-checked
+  locking; this is the paper the fix in `LazyThreadSafeSingleton` ultimately rests on.

@@ -80,3 +80,16 @@ covers record parsing, the "unknown account" sentinel record, and the exception 
 ```
 
 Report at `structural/adapter/build/reports/jacoco/test/html/index.html`.
+
+## Further reading
+
+- Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of
+  Reusable Object-Oriented Software*. Addison-Wesley. — Chapter 4 formalizes Adapter (both the
+  object and class variants).
+- Meyer, B. (1988). *Object-Oriented Software Construction*. Prentice Hall. — introduces the
+  Open-Closed Principle; an adapter is a direct application of it, extending compatibility
+  with a new interface without modifying either the client or the adaptee.
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*.
+  Addison-Wesley. — introduces the Anti-Corruption Layer, the module-level generalization of
+  what a single Adapter does at the class level; referenced directly in "When not to use it"
+  above.

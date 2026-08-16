@@ -83,3 +83,17 @@ covers all three strategies plus the "unregistered type" failure case.
 ```
 
 Report at `behavioral/strategy/build/reports/jacoco/test/html/index.html`.
+
+## Further reading
+
+- Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of
+  Reusable Object-Oriented Software*. Addison-Wesley. — Chapter 5 formalizes Strategy.
+- Parnas, D. L. (1972). "On the Criteria to Be Used in Decomposing Systems into Modules."
+  *Communications of the ACM*, 15(12), 1053–1058. — the foundational information-hiding
+  argument for why an algorithm variant belongs behind a stable interface (a module boundary)
+  instead of inside a conditional that every caller has to know about.
+- Liskov, B. (1987). "Data Abstraction and Hierarchy." OOPSLA '87 Addendum to the Proceedings,
+  *ACM SIGPLAN Notices*, 23(5). — the original statement of what became the Liskov
+  Substitution Principle: every concrete strategy must be swappable for `RouteStrategy` /
+  `FeeCalculationStrategy` without changing the correctness of the code that calls it, which is
+  exactly the contract `Navigator` and `FeeCalculator` depend on.

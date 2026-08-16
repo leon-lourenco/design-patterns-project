@@ -1,5 +1,10 @@
 # The Grand Design Patterns Project
 
+![Java](https://img.shields.io/badge/Java-26-orange?logo=openjdk&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-9.7-02303A?logo=gradle&logoColor=white)
+![Patterns implemented](https://img.shields.io/badge/patterns-3%2F15-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 A modular Java project demonstrating the Gang of Four design patterns that actually earn
 their keep in backend/enterprise code — one Gradle module per pattern, each with its own
 README, a textbook example, and a second example pulled from a real scenario where that
@@ -9,6 +14,18 @@ and you're done.
 
 This is a portfolio project by [Leonardo Lourenço Gomes](https://www.linkedin.com/in/leonardo-lourenço-gomes),
 a senior backend engineer, built in public in scoped batches.
+
+## Contents
+
+- [Why two examples per pattern](#why-two-examples-per-pattern)
+- [Patterns](#patterns)
+  - [Creational](#creational)
+  - [Structural](#structural)
+  - [Behavioral](#behavioral)
+- [Structure](#structure)
+- [Tech stack](#tech-stack)
+- [Running it](#running-it)
+- [License](#license)
 
 ## Why two examples per pattern
 
@@ -20,29 +37,44 @@ fintech-only by default — it's deliberately pulled from wherever in the author
 (payments, insurance, telecom, mainframe modernization) the underlying problem is the most
 natural fit, so it reads as engineering judgment rather than a forced tie-in.
 
-## Status
+Every module's own README also closes with a **Further reading** section: the papers and
+books that actually established the ideas the pattern leans on (information hiding,
+substitutability, memory-model guarantees, and so on), not just a link back to the GoF book.
 
-| # | Pattern | Category | Applied scenario | Status |
-|---|---------|----------|-------------------|--------|
-| 1 | [Singleton](creational/singleton) | Creational | PIX regulatory limit registry (BACEN), hand-rolled vs. Spring-managed | ✅ |
-| 2 | Builder | Creational | Auto loan proposal assembly (installments, insurance, collateral) | ⬜ |
-| 3 | Factory Method | Creational | Payment provider selection (PIX/Boleto/card) from a declared method | ⬜ |
-| 4 | Abstract Factory | Creational | Insurance policy + form + premium calculation, coherent per region | ⬜ |
-| 5 | [Adapter](structural/adapter) | Structural | Fronting a mainframe/COBOL account system with a modern port | ✅ |
-| 6 | Decorator | Structural | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) | ⬜ |
-| 7 | Facade | Structural | Salary portability orchestration (account check, Bacen lookup, notice) | ⬜ |
-| 8 | Proxy | Structural | Caching an expensive external credit-score bureau lookup | ⬜ |
-| 9 | Composite | Structural | Composable credit/insurance approval rule engine | ⬜ |
-| 10 | [Strategy](behavioral/strategy) | Behavioral | Per-transaction-type fee calculation (PIX/TED/Boleto) | ✅ |
-| 11 | Observer | Behavioral | Transaction status change fan-out (webhook, audit, push) | ⬜ |
-| 12 | Command | Behavioral | Replayable batch processing queue (millions of records/day) | ⬜ |
-| 13 | Template Method | Behavioral | Legacy system migration pipeline (read, validate, transform, write) | ⬜ |
-| 14 | Chain of Responsibility | Behavioral | Transaction compliance pipeline (KYC, AML, limit, fraud) | ⬜ |
-| 15 | State | Behavioral | Transaction lifecycle (PENDING → PROCESSING → SETTLED/FAILED) | ⬜ |
+## Patterns
 
-Only the three ✅ rows are implemented so far. The rest are scoped and mapped (see the table
-above) but not yet built — they'll land in the same structure, one module per commit, without
-needing to re-decide what each one demonstrates.
+Jump straight to a category, or to any module that's already built. ⬜ rows are scoped
+(scenario already decided) but not implemented yet.
+
+### Creational
+
+| Pattern | Applied scenario | Status |
+|---|---|---|
+| [Singleton](creational/singleton) | PIX regulatory limit registry (BACEN), hand-rolled vs. Spring-managed | ✅ |
+| Builder | Auto loan proposal assembly (installments, insurance, collateral) | ⬜ |
+| Factory Method | Payment provider selection (PIX/Boleto/card) from a declared method | ⬜ |
+| Abstract Factory | Insurance policy + form + premium calculation, coherent per region | ⬜ |
+
+### Structural
+
+| Pattern | Applied scenario | Status |
+|---|---|---|
+| [Adapter](structural/adapter) | Fronting a mainframe/COBOL account system with a modern port | ✅ |
+| Decorator | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) | ⬜ |
+| Facade | Salary portability orchestration (account check, Bacen lookup, notice) | ⬜ |
+| Proxy | Caching an expensive external credit-score bureau lookup | ⬜ |
+| Composite | Composable credit/insurance approval rule engine | ⬜ |
+
+### Behavioral
+
+| Pattern | Applied scenario | Status |
+|---|---|---|
+| [Strategy](behavioral/strategy) | Per-transaction-type fee calculation (PIX/TED/Boleto) | ✅ |
+| Observer | Transaction status change fan-out (webhook, audit, push) | ⬜ |
+| Command | Replayable batch processing queue (millions of records/day) | ⬜ |
+| Template Method | Legacy system migration pipeline (read, validate, transform, write) | ⬜ |
+| Chain of Responsibility | Transaction compliance pipeline (KYC, AML, limit, fraud) | ⬜ |
+| State | Transaction lifecycle (PENDING → PROCESSING → SETTLED/FAILED) | ⬜ |
 
 ## Structure
 
@@ -64,7 +96,7 @@ Every pattern module follows the same skeleton:
 ```
 <category>/<pattern>/
 ├── build.gradle.kts          # only present when the module needs extra dependencies
-├── README.md                 # problem, solution, both examples, trade-offs, coverage
+├── README.md                 # problem, solution, both examples, trade-offs, coverage, references
 └── src/
     ├── main/java/com/designpatterns/<category>/<pattern>/
     │   ├── classic/           # the textbook example
