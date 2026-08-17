@@ -1,6 +1,9 @@
 package com.designpatterns.creational.singleton.applied;
 
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.util.Collections;
 import java.util.Set;
@@ -12,9 +15,16 @@ import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Ordered on purpose - see {@code LazyThreadSafeSingletonTest} for why: the concurrency test
+ * must be the one that actually constructs the singleton under contention, not whichever test
+ * happens to call getInstance() first.
+ */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class HandRolledLimitRegistryTest {
 
     @Test
+    @Order(1)
     void everyConcurrentValidatorSeesTheSameRegistryInstance() throws InterruptedException {
         int threadCount = 50;
         ExecutorService pool = Executors.newFixedThreadPool(threadCount);
@@ -43,6 +53,7 @@ class HandRolledLimitRegistryTest {
     }
 
     @Test
+    @Order(2)
     void exposesTheRegulatoryLimits() {
         LimitRegistry registry = HandRolledLimitRegistry.getInstance();
 
