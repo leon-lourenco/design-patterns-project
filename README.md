@@ -2,7 +2,7 @@
 
 ![Java](https://img.shields.io/badge/Java-26-orange?logo=openjdk&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-9.7-02303A?logo=gradle&logoColor=white)
-![Patterns implemented](https://img.shields.io/badge/patterns-3%2F15-blue)
+![Patterns implemented](https://img.shields.io/badge/patterns-4%2F15-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 A modular Java project demonstrating the Gang of Four design patterns that actually earn
@@ -51,7 +51,7 @@ Jump straight to a category, or to any module that's already built. ⬜ rows are
 | Pattern | Applied scenario | Status |
 |---|---|---|
 | [Singleton](creational/singleton) | PIX regulatory limit registry (BACEN), hand-rolled vs. Spring-managed | ✅ |
-| Builder | Auto loan proposal assembly (installments, insurance, collateral) | ⬜ |
+| [Builder](creational/builder) | Auto loan proposal assembly (installments, insurance, collateral) | ✅ |
 | Factory Method | Payment provider selection (PIX/Boleto/card) from a declared method | ⬜ |
 | Abstract Factory | Insurance policy + form + premium calculation, coherent per region | ⬜ |
 
@@ -84,7 +84,8 @@ flowchart LR
     Root --> Structural["structural/"]
     Root --> Behavioral["behavioral/"]
     Creational --> Singleton["singleton ✅"]
-    Creational --> CreationalRest["builder, factory-method,\nabstract-factory 🔜"]
+    Creational --> Builder["builder ✅"]
+    Creational --> CreationalRest["factory-method,\nabstract-factory 🔜"]
     Structural --> Adapter["adapter ✅"]
     Structural --> StructuralRest["decorator, facade,\nproxy, composite 🔜"]
     Behavioral --> Strategy["strategy ✅"]
