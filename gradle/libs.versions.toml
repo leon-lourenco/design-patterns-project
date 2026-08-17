@@ -1,7 +1,7 @@
 [versions]
 junit = "5.11.4"
 assertj = "3.27.3"
-spring-context = "6.2.1"
+spring-context = "7.0.8"
 jacoco = "0.8.15"
 
 [libraries]
