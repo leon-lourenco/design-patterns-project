@@ -2,7 +2,7 @@
 
 ![Java](https://img.shields.io/badge/Java-26-orange?logo=openjdk&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-9.7-02303A?logo=gradle&logoColor=white)
-![Patterns implemented](https://img.shields.io/badge/patterns-4%2F15-blue)
+![Patterns implemented](https://img.shields.io/badge/patterns-5%2F15-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 A modular Java project demonstrating the Gang of Four design patterns that actually earn
@@ -60,7 +60,7 @@ Jump straight to a category, or to any module that's already built. ⬜ rows are
 | Pattern | Applied scenario | Status |
 |---|---|---|
 | [Adapter](structural/adapter) | Fronting a mainframe/COBOL account system with a modern port | ✅ |
-| Decorator | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) | ⬜ |
+| [Decorator](structural/decorator) | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) | ✅ |
 | Facade | Salary portability orchestration (account check, Bacen lookup, notice) | ⬜ |
 | Proxy | Caching an expensive external credit-score bureau lookup | ⬜ |
 | Composite | Composable credit/insurance approval rule engine | ⬜ |
@@ -87,7 +87,8 @@ flowchart LR
     Creational --> Builder["builder ✅"]
     Creational --> CreationalRest["factory-method,\nabstract-factory 🔜"]
     Structural --> Adapter["adapter ✅"]
-    Structural --> StructuralRest["decorator, facade,\nproxy, composite 🔜"]
+    Structural --> Decorator["decorator ✅"]
+    Structural --> StructuralRest["facade,\nproxy, composite 🔜"]
     Behavioral --> Strategy["strategy ✅"]
     Behavioral --> BehavioralRest["observer, command, template-method,\nchain-of-responsibility, state 🔜"]
 ```

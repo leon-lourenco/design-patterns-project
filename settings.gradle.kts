@@ -5,5 +5,6 @@ include(
     "creational:singleton",
     "creational:builder",
     "structural:adapter",
+    "structural:decorator",
     "behavioral:strategy",
 )
