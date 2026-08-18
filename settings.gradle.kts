@@ -9,4 +9,5 @@ include(
     "structural:decorator",
     "behavioral:strategy",
     "behavioral:observer",
+    "behavioral:templatemethod",
 )
