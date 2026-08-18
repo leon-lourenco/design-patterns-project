@@ -21,7 +21,7 @@ en vez de estructuras de datos.
 
 ## Algunos números reales
 
-- **6 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
+- **7 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
   ramas de JaCoCo excepto [Singleton](creational/singleton) (97%/87%) — la rama faltante ahí es
   un caso límite de concurrencia genuino, documentado en el propio README de ese módulo, no
   relleno artificial.
@@ -48,7 +48,7 @@ enlace de vuelta al libro del GoF.
 
 ## Los 15 patrones
 
-6 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
+7 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
 propio README, y cobertura genuina de JaCoCo (no inflada artificialmente para alcanzar un
 número).
 
@@ -56,7 +56,7 @@ número).
 |---|---|---|
 | [Singleton](creational/singleton) | Creational | Registro de límites regulatorios de PIX (BACEN), manual vs. gestionado por Spring |
 | [Builder](creational/builder) | Creational | Ensamblaje de propuesta de financiamiento vehicular (cuotas, seguro, garantía) |
-| Factory Method | Creational | Selección de proveedor de pago (PIX/Boleto/tarjeta) a partir del método declarado |
+| [Factory Method](creational/factorymethod) | Creational | Selección de proveedor de pago (PIX/Boleto/tarjeta) a partir del método declarado |
 | Abstract Factory | Creational | Póliza de seguro + formulario + cálculo de prima coherentes por región (aseguradora) |
 | [Adapter](structural/adapter) | Structural | Fachada sobre un sistema de cuentas mainframe/COBOL con un puerto moderno (banco heredado) |
 | [Decorator](structural/decorator) | Structural | Pipeline de enriquecimiento de transacciones (verificación de fraude, auditoría LGPD, límite de tasa) |

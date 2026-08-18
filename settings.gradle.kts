@@ -4,6 +4,7 @@ rootProject.name = "design-patterns-project"
 include(
     "creational:singleton",
     "creational:builder",
+    "creational:factorymethod",
     "structural:adapter",
     "structural:decorator",
     "behavioral:strategy",
