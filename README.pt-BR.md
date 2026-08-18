@@ -21,7 +21,7 @@ em vez de estruturas de dados.
 
 ## Alguns números reais
 
-- **9 dos 15 padrões já construídos**, todos com 100% de cobertura de instrução e branch do
+- **10 dos 15 padrões já construídos**, todos com 100% de cobertura de instrução e branch do
   JaCoCo exceto [Singleton](creational/singleton) (97%/87%) — o branch faltante ali é uma
   aresta de concorrência genuína, documentada no próprio README daquele módulo, não
   preenchimento artificial.
@@ -48,7 +48,7 @@ livro do GoF.
 
 ## Os 15 padrões
 
-9 já construídos: implementação do zero, uma implementação de cenário real, seu próprio README,
+10 já construídos: implementação do zero, uma implementação de cenário real, seu próprio README,
 e cobertura genuína do JaCoCo (não inflada artificialmente pra bater um número).
 
 | Padrão | Categoria | Cenário aplicado |
@@ -67,7 +67,7 @@ e cobertura genuína do JaCoCo (não inflada artificialmente pra bater um númer
 | Command | Behavioral | Fila de processamento em lote reproduzível (milhões de registros/dia) |
 | [Template Method](behavioral/templatemethod) | Behavioral | Pipeline de migração de sistema legado (ler, validar, transformar, gravar) |
 | [Chain of Responsibility](behavioral/chainofresponsibility) | Behavioral | Pipeline de compliance de transação (KYC, AML, limite, fraude) |
-| State | Behavioral | Ciclo de vida de transação (PENDING → PROCESSING → SETTLED/FAILED) |
+| [State](behavioral/state) | Behavioral | Ciclo de vida de transação (PENDING → PROCESSING → SETTLED/FAILED) |
 
 ## Estrutura
 
