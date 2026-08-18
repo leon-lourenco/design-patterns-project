@@ -21,7 +21,7 @@ en vez de estructuras de datos.
 
 ## Algunos números reales
 
-- **13 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
+- **14 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
   ramas de JaCoCo excepto [Singleton](creational/singleton) (97%/87%) — la rama faltante ahí es
   un caso límite de concurrencia genuino, documentado en el propio README de ese módulo, no
   relleno artificial.
@@ -48,7 +48,7 @@ enlace de vuelta al libro del GoF.
 
 ## Los 15 patrones
 
-13 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
+14 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
 propio README, y cobertura genuina de JaCoCo (no inflada artificialmente para alcanzar un
 número).
 
@@ -62,7 +62,7 @@ número).
 | [Decorator](structural/decorator) | Structural | Pipeline de enriquecimiento de transacciones (verificación de fraude, auditoría LGPD, límite de tasa) |
 | [Facade](structural/facade) | Structural | Orquestación de portabilidad salarial (verificación de cuenta, consulta a Bacen, aviso) |
 | [Proxy](structural/proxy) | Structural | Caché de una consulta costosa de score crediticio a un buró externo |
-| Composite | Structural | Motor de reglas de aprobación de crédito/seguro componible |
+| [Composite](structural/composite) | Structural | Motor de reglas de aprobación de crédito/seguro componible |
 | [Strategy](behavioral/strategy) | Behavioral | Cálculo de tarifa por tipo de transacción (PIX/TED/Boleto) |
 | [Observer](behavioral/observer) | Behavioral | Fan-out de cambio de estado de transacción (webhook, auditoría, push) |
 | [Command](behavioral/command) | Behavioral | Cola de procesamiento por lotes reproducible (millones de registros/día) |
