@@ -21,7 +21,7 @@ em vez de estruturas de dados.
 
 ## Alguns números reais
 
-- **14 dos 15 padrões já construídos**, todos com 100% de cobertura de instrução e branch do
+- **Os 15 padrões já construídos**, todos com 100% de cobertura de instrução e branch do
   JaCoCo exceto [Singleton](creational/singleton) (97%/87%) — o branch faltante ali é uma
   aresta de concorrência genuína, documentada no próprio README daquele módulo, não
   preenchimento artificial.
@@ -48,7 +48,7 @@ livro do GoF.
 
 ## Os 15 padrões
 
-14 já construídos: implementação do zero, uma implementação de cenário real, seu próprio README,
+Os 15 já construídos: implementação do zero, uma implementação de cenário real, seu próprio README,
 e cobertura genuína do JaCoCo (não inflada artificialmente pra bater um número).
 
 | Padrão | Categoria | Cenário aplicado |
@@ -56,7 +56,7 @@ e cobertura genuína do JaCoCo (não inflada artificialmente pra bater um númer
 | [Singleton](creational/singleton) | Creational | Registro de limites regulatórios do PIX (BACEN), na mão vs. gerenciado pelo Spring |
 | [Builder](creational/builder) | Creational | Montagem de proposta de financiamento de veículo (parcelas, seguro, garantia) |
 | [Factory Method](creational/factorymethod) | Creational | Seleção de provedor de pagamento (PIX/Boleto/cartão) a partir do método declarado |
-| Abstract Factory | Creational | Apólice de seguro + formulário + cálculo de prêmio coerentes por região (seguradora) |
+| [Abstract Factory](creational/abstractfactory) | Creational | Documento de apólice + calculadora de prêmio, coerentes por região, artesanal vs. gerenciado pelo Spring |
 | [Adapter](structural/adapter) | Structural | Fachada sobre um sistema de contas mainframe/COBOL com uma porta moderna (banco legado) |
 | [Decorator](structural/decorator) | Structural | Pipeline de enriquecimento de transação (checagem de fraude, auditoria LGPD, rate limit) |
 | [Facade](structural/facade) | Structural | Orquestração de portabilidade de salário (checagem de conta, consulta ao Bacen, aviso) |

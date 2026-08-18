@@ -21,8 +21,8 @@ structures.
 
 ## A few real numbers
 
-- **14 of 15 patterns built so far**, every one at 100% JaCoCo instruction and branch coverage
-  except [Singleton](creational/singleton) (97%/87%) — the missing branch there is a genuine
+- **All 15 patterns built**, every one at 100% JaCoCo instruction and branch coverage except
+  [Singleton](creational/singleton) (97%/87%) — the missing branch there is a genuine
   concurrency edge documented in that module's own README, not padding.
 - **[Singleton](creational/singleton)'s concurrency test fires 50 threads at `getInstance()`
   simultaneously** and asserts every single one observed the exact identical instance — proving
@@ -45,15 +45,15 @@ memory-model guarantees, and so on), not just a link back to the GoF book.
 
 ## The 15 patterns
 
-14 built so far: from-scratch implementation, a real-scenario implementation, its own README,
-and genuine JaCoCo coverage (not padded to hit a number).
+All 15 built: from-scratch implementation, a real-scenario implementation, its own README, and
+genuine JaCoCo coverage (not padded to hit a number).
 
 | Pattern | Category | Applied scenario |
 |---|---|---|
 | [Singleton](creational/singleton) | Creational | PIX regulatory limit registry (BACEN), hand-rolled vs. Spring-managed |
 | [Builder](creational/builder) | Creational | Auto-loan proposal assembly (installments, insurance, collateral) |
 | [Factory Method](creational/factorymethod) | Creational | Payment provider selection (PIX/Boleto/card) from a declared method |
-| Abstract Factory | Creational | Insurance policy + form + premium calculation, coherent per region (insurer) |
+| [Abstract Factory](creational/abstractfactory) | Creational | Insurance policy document + premium calculator, coherent per region, hand-rolled vs. Spring-managed |
 | [Adapter](structural/adapter) | Structural | Fronting a mainframe/COBOL account system with a modern port (legacy bank) |
 | [Decorator](structural/decorator) | Structural | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) |
 | [Facade](structural/facade) | Structural | Salary-portability orchestration (account check, Bacen lookup, notice) |

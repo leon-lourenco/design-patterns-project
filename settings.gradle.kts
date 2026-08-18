@@ -5,6 +5,7 @@ include(
     "creational:singleton",
     "creational:builder",
     "creational:factorymethod",
+    "creational:abstractfactory",
     "structural:adapter",
     "structural:decorator",
     "structural:facade",
