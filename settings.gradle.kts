@@ -7,6 +7,7 @@ include(
     "creational:factorymethod",
     "structural:adapter",
     "structural:decorator",
+    "structural:facade",
     "behavioral:strategy",
     "behavioral:observer",
     "behavioral:templatemethod",

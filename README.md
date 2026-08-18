@@ -21,7 +21,7 @@ structures.
 
 ## A few real numbers
 
-- **10 of 15 patterns built so far**, every one at 100% JaCoCo instruction and branch coverage
+- **11 of 15 patterns built so far**, every one at 100% JaCoCo instruction and branch coverage
   except [Singleton](creational/singleton) (97%/87%) — the missing branch there is a genuine
   concurrency edge documented in that module's own README, not padding.
 - **[Singleton](creational/singleton)'s concurrency test fires 50 threads at `getInstance()`
@@ -45,7 +45,7 @@ memory-model guarantees, and so on), not just a link back to the GoF book.
 
 ## The 15 patterns
 
-10 built so far: from-scratch implementation, a real-scenario implementation, its own README,
+11 built so far: from-scratch implementation, a real-scenario implementation, its own README,
 and genuine JaCoCo coverage (not padded to hit a number).
 
 | Pattern | Category | Applied scenario |
@@ -56,7 +56,7 @@ and genuine JaCoCo coverage (not padded to hit a number).
 | Abstract Factory | Creational | Insurance policy + form + premium calculation, coherent per region (insurer) |
 | [Adapter](structural/adapter) | Structural | Fronting a mainframe/COBOL account system with a modern port (legacy bank) |
 | [Decorator](structural/decorator) | Structural | Transaction enrichment pipeline (fraud check, LGPD audit, rate limit) |
-| Facade | Structural | Salary-portability orchestration (account check, Bacen lookup, notice) |
+| [Facade](structural/facade) | Structural | Salary-portability orchestration (account check, Bacen lookup, notice) |
 | Proxy | Structural | Caching an expensive external credit-score bureau lookup |
 | Composite | Structural | Composable credit/insurance approval rule engine |
 | [Strategy](behavioral/strategy) | Behavioral | Per-transaction-type fee calculation (PIX/TED/Boleto) |
