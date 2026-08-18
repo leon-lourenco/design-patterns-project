@@ -10,4 +10,5 @@ include(
     "behavioral:strategy",
     "behavioral:observer",
     "behavioral:templatemethod",
+    "behavioral:chainofresponsibility",
 )

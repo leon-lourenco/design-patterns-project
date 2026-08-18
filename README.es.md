@@ -21,7 +21,7 @@ en vez de estructuras de datos.
 
 ## Algunos números reales
 
-- **8 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
+- **9 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
   ramas de JaCoCo excepto [Singleton](creational/singleton) (97%/87%) — la rama faltante ahí es
   un caso límite de concurrencia genuino, documentado en el propio README de ese módulo, no
   relleno artificial.
@@ -48,7 +48,7 @@ enlace de vuelta al libro del GoF.
 
 ## Los 15 patrones
 
-8 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
+9 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
 propio README, y cobertura genuina de JaCoCo (no inflada artificialmente para alcanzar un
 número).
 
@@ -67,7 +67,7 @@ número).
 | [Observer](behavioral/observer) | Behavioral | Fan-out de cambio de estado de transacción (webhook, auditoría, push) |
 | Command | Behavioral | Cola de procesamiento por lotes reproducible (millones de registros/día) |
 | [Template Method](behavioral/templatemethod) | Behavioral | Pipeline de migración de sistema heredado (leer, validar, transformar, escribir) |
-| Chain of Responsibility | Behavioral | Pipeline de cumplimiento de transacciones (KYC, AML, límite, fraude) |
+| [Chain of Responsibility](behavioral/chainofresponsibility) | Behavioral | Pipeline de cumplimiento de transacciones (KYC, AML, límite, fraude) |
 | State | Behavioral | Ciclo de vida de una transacción (PENDING → PROCESSING → SETTLED/FAILED) |
 
 ## Estructura

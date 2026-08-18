@@ -21,7 +21,7 @@ structures.
 
 ## A few real numbers
 
-- **8 of 15 patterns built so far**, every one at 100% JaCoCo instruction and branch coverage
+- **9 of 15 patterns built so far**, every one at 100% JaCoCo instruction and branch coverage
   except [Singleton](creational/singleton) (97%/87%) — the missing branch there is a genuine
   concurrency edge documented in that module's own README, not padding.
 - **[Singleton](creational/singleton)'s concurrency test fires 50 threads at `getInstance()`
@@ -45,7 +45,7 @@ memory-model guarantees, and so on), not just a link back to the GoF book.
 
 ## The 15 patterns
 
-8 built so far: from-scratch implementation, a real-scenario implementation, its own README,
+9 built so far: from-scratch implementation, a real-scenario implementation, its own README,
 and genuine JaCoCo coverage (not padded to hit a number).
 
 | Pattern | Category | Applied scenario |
@@ -63,7 +63,7 @@ and genuine JaCoCo coverage (not padded to hit a number).
 | [Observer](behavioral/observer) | Behavioral | Transaction status change fan-out (webhook, audit, push) |
 | Command | Behavioral | Replayable batch processing queue (millions of records/day) |
 | [Template Method](behavioral/templatemethod) | Behavioral | Legacy system migration pipeline (read, validate, transform, write) |
-| Chain of Responsibility | Behavioral | Transaction compliance pipeline (KYC, AML, limit, fraud) |
+| [Chain of Responsibility](behavioral/chainofresponsibility) | Behavioral | Transaction compliance pipeline (KYC, AML, limit, fraud) |
 | State | Behavioral | Transaction lifecycle (PENDING → PROCESSING → SETTLED/FAILED) |
 
 ## Structure
