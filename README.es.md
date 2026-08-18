@@ -21,7 +21,7 @@ en vez de estructuras de datos.
 
 ## Algunos números reales
 
-- **12 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
+- **13 de 15 patrones construidos hasta ahora**, todos con 100% de cobertura de instrucciones y
   ramas de JaCoCo excepto [Singleton](creational/singleton) (97%/87%) — la rama faltante ahí es
   un caso límite de concurrencia genuino, documentado en el propio README de ese módulo, no
   relleno artificial.
@@ -48,7 +48,7 @@ enlace de vuelta al libro del GoF.
 
 ## Los 15 patrones
 
-12 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
+13 construidos hasta ahora: implementación desde cero, una implementación de escenario real, su
 propio README, y cobertura genuina de JaCoCo (no inflada artificialmente para alcanzar un
 número).
 
@@ -61,7 +61,7 @@ número).
 | [Adapter](structural/adapter) | Structural | Fachada sobre un sistema de cuentas mainframe/COBOL con un puerto moderno (banco heredado) |
 | [Decorator](structural/decorator) | Structural | Pipeline de enriquecimiento de transacciones (verificación de fraude, auditoría LGPD, límite de tasa) |
 | [Facade](structural/facade) | Structural | Orquestación de portabilidad salarial (verificación de cuenta, consulta a Bacen, aviso) |
-| Proxy | Structural | Caché de una consulta costosa de score crediticio a un buró externo |
+| [Proxy](structural/proxy) | Structural | Caché de una consulta costosa de score crediticio a un buró externo |
 | Composite | Structural | Motor de reglas de aprobación de crédito/seguro componible |
 | [Strategy](behavioral/strategy) | Behavioral | Cálculo de tarifa por tipo de transacción (PIX/TED/Boleto) |
 | [Observer](behavioral/observer) | Behavioral | Fan-out de cambio de estado de transacción (webhook, auditoría, push) |

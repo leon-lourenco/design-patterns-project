@@ -8,6 +8,7 @@ include(
     "structural:adapter",
     "structural:decorator",
     "structural:facade",
+    "structural:proxy",
     "behavioral:strategy",
     "behavioral:observer",
     "behavioral:templatemethod",
