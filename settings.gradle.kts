@@ -13,4 +13,5 @@ include(
     "behavioral:templatemethod",
     "behavioral:chainofresponsibility",
     "behavioral:state",
+    "behavioral:command",
 )
