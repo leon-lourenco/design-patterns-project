@@ -7,4 +7,5 @@ include(
     "structural:adapter",
     "structural:decorator",
     "behavioral:strategy",
+    "behavioral:observer",
 )

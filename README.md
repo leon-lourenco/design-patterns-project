@@ -2,7 +2,7 @@
 
 ![Java](https://img.shields.io/badge/Java-26-orange?logo=openjdk&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-9.7-02303A?logo=gradle&logoColor=white)
-![Patterns implemented](https://img.shields.io/badge/patterns-5%2F15-blue)
+![Patterns implemented](https://img.shields.io/badge/patterns-6%2F15-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 A modular Java project demonstrating the Gang of Four design patterns that actually earn
@@ -70,7 +70,7 @@ Jump straight to a category, or to any module that's already built. ⬜ rows are
 | Pattern | Applied scenario | Status |
 |---|---|---|
 | [Strategy](behavioral/strategy) | Per-transaction-type fee calculation (PIX/TED/Boleto) | ✅ |
-| Observer | Transaction status change fan-out (webhook, audit, push) | ⬜ |
+| [Observer](behavioral/observer) | Transaction status change fan-out (webhook, audit, push) | ✅ |
 | Command | Replayable batch processing queue (millions of records/day) | ⬜ |
 | Template Method | Legacy system migration pipeline (read, validate, transform, write) | ⬜ |
 | Chain of Responsibility | Transaction compliance pipeline (KYC, AML, limit, fraud) | ⬜ |
@@ -90,7 +90,8 @@ flowchart LR
     Structural --> Decorator["decorator ✅"]
     Structural --> StructuralRest["facade,\nproxy, composite 🔜"]
     Behavioral --> Strategy["strategy ✅"]
-    Behavioral --> BehavioralRest["observer, command, template-method,\nchain-of-responsibility, state 🔜"]
+    Behavioral --> Observer["observer ✅"]
+    Behavioral --> BehavioralRest["command, template-method,\nchain-of-responsibility, state 🔜"]
 ```
 
 Every pattern module follows the same skeleton:
